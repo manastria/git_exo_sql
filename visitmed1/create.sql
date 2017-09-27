@@ -1,6 +1,6 @@
 DROP TABLE infirmiere;
 CREATE TABLE infirmiere (
-    mat_inf char(8),
+    mat_inf char(8) PRIMARY KEY,
     nom_inf varchar(50),
     pnom_inf varchar(50),
     telp_inf varchar(20),
@@ -10,7 +10,7 @@ CREATE TABLE infirmiere (
 
 DROP TABLE patient;
 CREATE TABLE patient (
-    num_pat char(8),
+    num_pat char(8) PRIMARY KEY,
     nom_pat varchar(50),
     pnom_pat varchar(50),
     dnaiss_pat date,
@@ -35,6 +35,8 @@ INSERT INTO infirmiere VALUES ('I6758   ', 'Williams', NULL, '06.27.23.87.17', '
 INSERT INTO infirmiere VALUES ('I5032   ', 'Harrison', 'Salvatore', '06.23.34.36.19', '01.67.57.01.73');
 INSERT INTO infirmiere VALUES ('I4296   ', 'Johnson', 'Sammy', '06.17.45.23.85', NULL);
 
+
+INSERT INTO infirmiere VALUES ('I4296   ', 'Toto', 'titi', '06.17.45.23.85', NULL);
 
 --
 -- Data for patient
