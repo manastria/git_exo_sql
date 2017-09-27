@@ -1,8 +1,8 @@
 DROP TABLE infirmiere;
 CREATE TABLE infirmiere (
     mat_inf char(8) PRIMARY KEY,
-    nom_inf varchar(50),
-    pnom_inf varchar(50),
+    nom_inf varchar(50) NOT NULL,
+    pnom_inf varchar(50) NOT NULL,
     telp_inf varchar(20),
     teld_inf varchar(20)
 );
@@ -11,8 +11,8 @@ CREATE TABLE infirmiere (
 DROP TABLE patient;
 CREATE TABLE patient (
     num_pat char(8) PRIMARY KEY,
-    nom_pat varchar(50),
-    pnom_pat varchar(50),
+    nom_pat varchar(50) NOT NULL,
+    pnom_pat varchar(50) NOT NULL,
     dnaiss_pat date,
     adr_pat varchar(255),
     num_secu char(15),
