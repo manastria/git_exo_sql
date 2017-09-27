@@ -1,14 +1,16 @@
 DROP TABLE infirmiere;
+DROP TABLE patient;
+
+
 CREATE TABLE infirmiere (
-    mat_inf char(8) PRIMARY KEY,
+    id_inf SERIAL PRIMARY KEY,
+    mat_inf char(8) NOT NULL UNIQUE,
     nom_inf varchar(50) NOT NULL,
     pnom_inf varchar(50) NOT NULL,
     telp_inf varchar(20),
     teld_inf varchar(20)
 );
 
-
-DROP TABLE patient;
 CREATE TABLE patient (
     num_pat char(8) PRIMARY KEY,
     nom_pat varchar(50) NOT NULL,
@@ -24,16 +26,16 @@ CREATE TABLE patient (
 -- Data for infirmiere
 --
 
-INSERT INTO infirmiere VALUES ('I5317   ', 'Valentine', 'Casey', '06.26.07.18.59', '04.10.71.70.97');
-INSERT INTO infirmiere VALUES ('I6902   ', 'Mason', 'Colleen', '06.41.71.35.31', '02.45.44.78.42');
-INSERT INTO infirmiere VALUES ('I3600   ', 'Baird', 'Bernard', '06.17.24.55.33', '03.23.68.37.66');
-INSERT INTO infirmiere VALUES ('I2309   ', 'Stafford', 'Hector', '06.88.78.20.53', '03.50.33.38.34');
-INSERT INTO infirmiere VALUES ('I8950   ', 'Chase', 'Mike', '06.66.71.41.88', '03.84.36.32.67');
-INSERT INTO infirmiere VALUES ('I7952   ', 'Valentine', 'Ruby', '06.93.37.41.46', '03.82.24.16.86');
-INSERT INTO infirmiere VALUES ('I6132   ', 'Jackson', 'Duane', NULL, '02.68.63.87.66');
-INSERT INTO infirmiere VALUES ('I6758   ', 'Williams', 'Valentine', '06.27.23.87.17', '03.68.43.63.46');
-INSERT INTO infirmiere VALUES ('I5032   ', 'Harrison', 'Salvatore', '06.23.34.36.19', '01.67.57.01.73');
-INSERT INTO infirmiere VALUES ('I4296   ', 'Johnson', 'Sammy', '06.17.45.23.85', NULL);
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I5317   ', 'Valentine', 'Casey', '06.26.07.18.59', '04.10.71.70.97');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I6902   ', 'Mason', 'Colleen', '06.41.71.35.31', '02.45.44.78.42');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I3600   ', 'Baird', 'Bernard', '06.17.24.55.33', '03.23.68.37.66');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I2309   ', 'Stafford', 'Hector', '06.88.78.20.53', '03.50.33.38.34');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I8950   ', 'Chase', 'Mike', '06.66.71.41.88', '03.84.36.32.67');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I7952   ', 'Valentine', 'Ruby', '06.93.37.41.46', '03.82.24.16.86');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I6132   ', 'Jackson', 'Duane', NULL, '02.68.63.87.66');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I6758   ', 'Williams', 'Valentine', '06.27.23.87.17', '03.68.43.63.46');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I5032   ', 'Harrison', 'Salvatore', '06.23.34.36.19', '01.67.57.01.73');
+INSERT INTO infirmiere (mat_inf, nom_inf, pnom_inf, telp_inf, teld_inf) VALUES ('I4296   ', 'Johnson', 'Sammy', '06.17.45.23.85', NULL);
 
 
 -- INSERT INTO patient VALUES ('P307', 'Hunt', 'Marcia', '1988-01-18', '285', '', 'gdfgfdgfd');
