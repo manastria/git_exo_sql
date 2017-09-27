@@ -64,3 +64,5 @@ INSERT INTO patient VALUES ('P4266   ', 'Schmidt', 'Oliver', NULL, '464 North Ro
 INSERT INTO patient VALUES ('P6073   ', 'Valentine', 'Candice', '1936-11-26', '224 West White Second Drive', NULL, NULL);
 INSERT INTO patient VALUES ('P3027   ', 'Hunt', 'Marcia', '1988-01-18', '285 South White First Parkway', '334465765184   ', NULL);
 
+ALTER TABLE patient 
+ADD CONSTRAINT c_fk_patient_mat_inf FOREIGN KEY (mat_inf) REFERENCES infirmiere(mat_inf);
