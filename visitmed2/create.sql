@@ -26,7 +26,9 @@ CREATE TABLE patient (
 
 CREATE TABLE visite (
     id_inf int,
-    id_pat int
+    id_pat int,
+    date_visite date, 
+    heure_visite time
 );
 
 ALTER TABLE visite ADD CONSTRAINT c_pk_visite PRIMARY KEY (id_inf, id_pat);
